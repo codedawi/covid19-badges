@@ -1,4 +1,12 @@
-const axios = require('axios').default;
+const axios = require("axios");
+const { setupCache } = require("axios-cache-adapter");
+
+// Create `axios` instance passing the newly created `cache.adapter`
+const api = axios.create({
+    adapter: setupCache({
+        maxAge: 15 * 60 * 1000
+    }).adapter
+})
 
 const url = "https://coronavirus-tracker-api.herokuapp.com/v2/locations";
 
@@ -12,14 +20,14 @@ const url = "https://coronavirus-tracker-api.herokuapp.com/v2/locations";
  */
 
 
- /**
-  * Get latest cases, deaths, and recovers globally of COVID-19
-  */
+/**
+ * Get latest cases, deaths, and recovers globally of COVID-19
+ */
 async function getLatestGlobally() {
 
-    const { data } = await axios.get(`${url}/v2/latest`);
+    const { data } = await api.get(`${url}/v2/latest`);
 
-    return data;
+    return data.latest;
 }
 /**
  * Get latest cases, deaths, and recovers globally of COVID-19
@@ -35,13 +43,7 @@ async function getLatestByCountry(country) {
         "timelines": 0,
     };
 
-    const { data } = await axios.get(`${url}/v2/locations`, { params });
-
-    const latestZero = {
-        confirmed: 0,
-        deaths: 0,
-        recovered: 0,
-    };
+    const { data } = await api.get(`${url}/v2/locations`, { params });
 
     const latest = data.locations.reduce(
         (total, province) => {
@@ -51,10 +53,10 @@ async function getLatestByCountry(country) {
                 recovered: total.recovered + province.latest.recovered,
             }
         },
-        latestZero,
+        { confirmed: 0, deaths: 0, recovered: 0, }
     )
 
-    return { latest };
+    return latest;
 }
 
 module.exports = { getLatestGlobally, getLatestByCountry, }
@@ -85,16 +87,16 @@ module.exports = { getLatestGlobally, getLatestByCountry, }
 
         const change = data.locations.reduce(
             (diff, province) => {
-                
+
                 let total = 0;
 
                 Object.entries(province.timelines)
                     .forEach(([d, count]) => {
-                        // 2020-01-22T00:00:00Z  
+                        // 2020-01-22T00:00:00Z
                         const jsd = Date.parse(d.replace("Z", ""))
                         // ignore time
                         jsd.setHours(0, 0, 0, 0)
-                        
+
                         if (jsd >= since) {
                             total += count
                         }
