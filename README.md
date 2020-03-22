@@ -2,23 +2,23 @@
 
 ![Cases](https://covid19-badges.herokuapp.com/confirmed)
 
-**url:** `https://covid19-badges.herokuapp.com/confirmed/lastest`
+**url:** `https://covid19-badges.herokuapp.com/confirmed/latest`
 
-**usage:** `![Covid-19 Confirmed](https://covid19-badges.herokuapp.com/confirmed/lastest)`
+**usage:** `![Covid-19 Confirmed](https://covid19-badges.herokuapp.com/confirmed/latest)`
 
 
 ![Deaths](https://covid19-badges.herokuapp.com/deaths)
 
-**url:** `https://covid19-badges.herokuapp.com/deaths/lastest`
+**url:** `https://covid19-badges.herokuapp.com/deaths/latest`
 
-**usage:** `![Covid-19 Deaths](https://covid19-badges.herokuapp.com/deaths/lastest)`
+**usage:** `![Covid-19 Deaths](https://covid19-badges.herokuapp.com/deaths/latest)`
 
 
 ![Recovered](https://covid19-badges.herokuapp.com/recovered)
 
-**url:** `https://covid19-badges.herokuapp.com/recovered/lastest`
+**url:** `https://covid19-badges.herokuapp.com/recovered/latest`
 
-**usage:** `![Covid-19 Recovered](https://covid19-badges.herokuapp.com/recovered/lastest)`
+**usage:** `![Covid-19 Recovered](https://covid19-badges.herokuapp.com/recovered/latest)`
 
 ## Data Sources
 
@@ -32,7 +32,7 @@ Rest API `COVID-19` data :arrow_right: [ExpDev07/coronavirus-tracker-api](https:
 
 ![GitHub stars](https://img.shields.io/github/stars/ExpDev07/coronavirus-tracker-api)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ExpDev07/coronavirus-tracker-api)
-[![Website link!](https://img.shields.io/badge/website-link-1abc9c.svg)](https://nextstrain.org/ncov)
+[![Website link!](https://img.shields.io/badge/api-link-1abc9c.svg)](https://coronavirus-tracker-api.herokuapp.com/v2/locations)
 
 
 ## Developing Badge Service
