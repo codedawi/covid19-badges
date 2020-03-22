@@ -8,7 +8,7 @@ const api = axios.create({
     }).adapter
 })
 
-const url = "https://coronavirus-tracker-api.herokuapp.com/v2/locations";
+const url = "https://coronavirus-tracker-api.herokuapp.com";
 
 /**
  * Interface COVID-19 Cases Statistics
@@ -24,9 +24,9 @@ const url = "https://coronavirus-tracker-api.herokuapp.com/v2/locations";
  * Get latest cases, deaths, and recovers globally of COVID-19
  */
 async function getLatestGlobally() {
-
+  
     const { data } = await api.get(`${url}/v2/latest`);
-
+    
     return data.latest;
 }
 /**

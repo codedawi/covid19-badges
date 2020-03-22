@@ -2,10 +2,10 @@
     "name": "covid19-badges",
     "version": "1.0.0",
     "description": "svg badges displaying cases, deaths, and 24h changes",
-    "main": "src/app.js",
+    "main": "src/server.js",
     "scripts": {
-        "start": "NODE_ENV=production node ./src/bin/www",
-        "dev": "NODE_ENV=development nodemon ./src/bin/www",
+        "start": "NODE_ENV=production node ./src/server.js",
+        "dev": "NODE_ENV=development nodemon ./src/server.js",
         "lint": "eslint .",
         "test": "jest",
         "test:watch": "jest --watchAll",
@@ -28,12 +28,14 @@
     "homepage": "https://github.com/opensource-covid19/bagdes#readme",
     "dependencies": {
         "axios": "^0.19.2",
+        "axios-cache-adapter": "^2.5.0",
         "badgen": "^3.0.1",
         "cookie-parser": "^1.4.5",
         "express": "^4.17.1",
         "helmet": "^3.21.3",
         "http-errors": "^1.7.3",
-        "morgan": "^1.9.1"
+        "morgan": "^1.9.1",
+        "numeral": "^2.0.6"
     },
     "devDependencies": {
         "eslint": "^6.8.0",
