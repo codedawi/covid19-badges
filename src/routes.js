@@ -24,6 +24,7 @@ const addCommas = (num) => numeral(num).format('0,0');
  */
 const getBadge = (label, color, data) => badgen({ label, status: addCommas(data), color, });
 
+router.use(svgMiddleware)
 
 router.get(["/confirmed", "/confirmed/latest"], async (req, res) => {
 
@@ -55,6 +56,6 @@ router.get(["/recovered", "/recovered/latest"], async (req, res) => {
     
 });
 
-router.use(svgMiddleware)
+
 
 module.exports = router;

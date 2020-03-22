@@ -10,8 +10,8 @@ const httpErrorMiddleware = (err, _req, res, _next) => {
 };
 
 const svgMiddleware = (_req, res, next) => {
-    res.setHeader('Cache-Control', `public, max-age=120, s-maxage=300, stale-while-revalidate=86400`)
-    res.setHeader('Content-Type', 'image/svg+xml;charset=utf-8')
+    res.set('Cache-Control', `public, max-age=120, s-maxage=300, stale-while-revalidate=86400`)
+    res.set('Content-Type', 'image/svg+xml;charset=utf-8')
     next()
 };
 
