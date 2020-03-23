@@ -26,33 +26,40 @@ const getBadge = (label, color, data) => badgen({ label, status: addCommas(data)
 
 router.use(svgMiddleware)
 
-router.get(["/confirmed", "/confirmed/latest"], async (req, res) => {
+router.get(
+    ["/confirmed", "/confirmed/latest", "cases", "cases/latest"],
+    async (req, res) => {
 
-    const { confirmed } = await services.getLatestGlobally();
+        const { confirmed } = await services.getLatestGlobally();
 
-    const label = req.query.long ? "COVID-19 Cases" : "cases";
+        const label = req.query.long ? "COVID-19 Cases" : "cases";
 
-    res.send(getBadge(label, "orange", confirmed));
+        res.send(getBadge(label, "orange", confirmed));
     
 });
 
-router.get(["/deaths", "/deaths/latest"], async (req, res) => {
+router.get(
+    ["/deaths", "/deaths/latest"],
+    async (req, res) => {
     
-    const { deaths } = await services.getLatestGlobally();
+        const { deaths } = await services.getLatestGlobally();
 
-    const label = req.query.long ? "COVID-19 Deaths" : "deaths";
+        const label = req.query.long ? "COVID-19 Deaths" : "deaths";
 
-    res.send(getBadge(label, "red", deaths));
+        res.send(getBadge(label, "red", deaths));
     
 });
 
-router.get(["/recovered", "/recovered/latest"], async (req, res) => {
+router.get(
+    ["/recovered", "/recovered/latest"],
+    
+    async (req, res) => {
 
-    const { recovered } = await services.getLatestGlobally();
+        const { recovered } = await services.getLatestGlobally();
 
-    const label = req.query.long ? "COVID-19 Recovered" : "recovered";
+        const label = req.query.long ? "COVID-19 Recovered" : "recovered";
 
-    res.send(getBadge(label, "green", recovered));
+        res.send(getBadge(label, "green", recovered));
     
 });
 

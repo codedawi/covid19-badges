@@ -2,9 +2,9 @@
 
 ![Cases](https://covid19-badges.herokuapp.com/confirmed)
 
-**url:** `https://covid19-badges.herokuapp.com/confirmed/latest`
+**url:** `https://covid19-badges.herokuapp.com/cases/latest`
 
-**usage:** `![Covid-19 Confirmed](https://covid19-badges.herokuapp.com/confirmed/latest)`
+**usage:** `![Covid-19 Cases](https://covid19-badges.herokuapp.com/cases/latest)`
 
 
 ![Deaths](https://covid19-badges.herokuapp.com/deaths)
@@ -19,6 +19,16 @@
 **url:** `https://covid19-badges.herokuapp.com/recovered/latest`
 
 **usage:** `![Covid-19 Recovered](https://covid19-badges.herokuapp.com/recovered/latest)`
+
+### Long Form Labels
+![Cases](https://covid19-badges.herokuapp.com/confirmed?long=true)
+![Deaths](https://covid19-badges.herokuapp.com/deaths?long=true)
+![Recovered](https://covid19-badges.herokuapp.com/recovered?long=true)
+
+**url:** `...?long=true`
+
+
+
 
 ## Data Sources
 
