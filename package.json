@@ -34,7 +34,9 @@
         "express": "^4.17.1",
         "helmet": "^3.21.3",
         "http-errors": "^1.7.3",
+        "markdown-it": "^10.0.0",
         "morgan": "^1.9.1",
+        "node-cache": "^5.1.0",
         "numeral": "^2.0.6"
     },
     "devDependencies": {
