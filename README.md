@@ -4,7 +4,7 @@
 
 **url:** `https://covid19-badges.herokuapp.com/confirmed/latest`
 
-**usage:** `![Covid-19 Cases](https://covid19-badges.herokuapp.com/cases/latest)`
+**usage:** `![Covid-19 Cases](https://covid19-badges.herokuapp.com/confirmed/latest)`
 
 
 ![Deaths](https://covid19-badges.herokuapp.com/deaths)
