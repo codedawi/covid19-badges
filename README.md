@@ -14,7 +14,7 @@
 **usage:** `![Covid-19 Deaths](https://covid19-badges.herokuapp.com/deaths/latest)`
 
 
-![Recovered](https://covid19-badges.herokuapp.com/recovered) (see issue #1)
+![Recovered](https://covid19-badges.herokuapp.com/recovered) (see issue [#1](https://github.com/fight-covid19/bagdes/issues/1))
 
 **url:** `https://covid19-badges.herokuapp.com/recovered/latest`
 
